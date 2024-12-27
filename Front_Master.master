@@ -1,0 +1,217 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Front_Master.master.cs" Inherits="placement_Front_Master" %>
+
+<!doctype html>
+<html>
+<head runat="server">
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- global stylesheet -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/themify-icons.css" rel="stylesheet" type="text/css">
+<link href="css/menu.css" rel="stylesheet" type="text/css">
+<link href="css/style1.css" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+.main-menu li.active > a {
+    background-color: #029cce; /* Replace with your desired color */
+   
+}
+
+    </style>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuItems = document.querySelectorAll('.main-menu li');
+        
+        // Check if there's an active menu item saved in localStorage
+        const activeIndex = localStorage.getItem('activeMenuItem');
+        
+        // If there is, apply the 'active' class to the corresponding menu item
+        if (activeIndex) {
+            menuItems[activeIndex].classList.add('active');
+        }
+
+        menuItems.forEach((item, index) => {
+            item.addEventListener('click', function () {
+                // Remove 'active' class from all menu items
+                menuItems.forEach(i => i.classList.remove('active'));
+
+                // Add 'active' class to the clicked item
+                this.classList.add('active');
+
+                // Save the index of the clicked item in localStorage
+                localStorage.setItem('activeMenuItem', index);
+            });
+        });
+    });
+</script>
+
+
+
+</head>
+<body id="main-wrapper" class="clearfix">
+    <form id="form1" runat="server">
+        <div id="navbar">
+        <!--  header part   -->
+        <header>
+            <div class="container-fluid">
+               <div class="row">
+                        <div class="col-sm-3">
+                            <a href="Default.aspx">
+                                <img src="images/logo.png" class="img-responsive"  />
+                            </a>
+                            <div class="slide-buttons">
+                                <button id="slide-buttons" class="slide-button icon icon-navicon"></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div >
+                                <p>Call Us :  +91 33 <a href="tel:03340648237">40648237</a></p>
+                                <p>Corporate: <a href="mailto:contact@suvidhajobs.in">contact@suvidhajobs.in</a></p>
+                                <p>Candidate: <a href="mailto:cvdrop@suvidhajobs.in">cvdrop@suvidhajobs.in</a></p>
+                                <p>Follow Us: <a href="http://www.linkedin.com/company/2857332?trk=tyah&trkInfo=tarId%3A1399025737812%2Ctas%3Asuvidha%20pla%2Cidx%3A1-1-1" target="_blank"><img src="images/linkdin.png"></a> 
+                                 <a href="https://www.facebook.com/suvidhaplacements" target="_blank"><img src="images/facebook.png"></a> <a href="https://twitter.com/Suvidha_Jobs" target="_blank"><img src="images/twitter.png"></a> <a href="https://www.youtube.com/channel/UCNEyUO83kvhQhtY5k0qMDSg" target="_blank"><img src="images/youtube.png"></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </header>
+        <!--  //end header part   -->
+        
+        <!-- menu part -->
+        <section class="menu-part" id="navbar">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="main-menu">
+                            <ul>                                                              
+                                <li><a href="default.aspx">Home</a></li>
+                                <li><a href="about_us.aspx">About us</a>
+                                    <ul>
+                                        <li><a href="about_us.aspx">About us</a></li>
+                                        <li><a href="our_services.aspx">Our Services </a></li>
+                                        <li><a href="our_strengths.aspx">Our Strength</a></li>
+                                        <li><a href="our_expertises.aspx">Our Expertise</a></li>
+                                    </ul>
+								</li>
+                                <li><a href="Employer_Login.aspx">Employer Zone</a>
+								
+								<ul>
+                            <li><a href="Employer_Login.aspx">Employer Login</a></li>
+                            <li><a href="verticals.aspx">Verticals</a></li>
+                            <li><a href="osp.aspx">Our Selection Process</a></li>
+                        </ul></li>
+                                <li><a href="CandidateZone_Login1.aspx">Job Seeker</a>
+								 <ul>                            
+                                   <li><a href="CandidateZone_Login1.aspx">Jobseeker Login</a></li>   
+                                   <li><a href="PostResume1.aspx">Jobseeker Registration</a></li>
+                                 </ul>
+								</li>
+                                <li><a href="career.aspx">Careers</a></li>
+								<li><a href="gallery.aspx">Gallery</a></li>
+                                <li><a href="contact.aspx">Contact Us</a></li>
+                            </ul>
+                        </div>    
+                        <!-- Menu Mobile -->
+                        <nav id="c-menu--slide-right" class="c-menu c-menu--slide-right">
+                            <button class="c-menu__close icon icon-close"></button>
+                            <ul class="slide-menu-items">
+                                <li><a href="default.aspx">Home</a></li>
+                                <li><a href="about_us.aspx">About Us</a>
+                                    <ul>
+                                        <li><a href="about_us.aspx">About us</a></li>
+                                        <li><a href="our_services.aspx">Our Services </a></li>
+                                        <li><a href="our_strengths.aspx">Our Strength</a></li>
+                                        <li><a href="our_expertises.aspx">Our Expertise</a></li>
+                                    </ul>
+								</li>
+                                <li><a href="Employer_Login.aspx">Employer Zone</a>
+							     	<ul>
+                                       <li><a href="Employer_Login.aspx">Employer Login</a></li>
+                                       <li><a href="verticals.aspx">Verticals</a></li>
+                                       <li><a href="osp.aspx">Our Selection Process</a></li>
+                                    </ul>
+								</li>
+                                <li><a href="CandidateZone_Login1.aspx">Job Seeker</a>
+								 <ul>                            
+                                   <li><a href="CandidateZone_Login1.aspx">Jobseeker Login</a></li>   
+                                   <li><a href="PostResume1.aspx">Jobseeker Registration</a></li>
+                                 </ul>
+								</li>
+                                <li><a href="career.aspx">Careers</a></li>
+								<li><a href="gallery.aspx">Gallery</a></li>
+                                <li><a href="contact.aspx">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                        <div id="slide-overlay" class="slide-overlay"></div>
+                        <!-- Menu Mobile End -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //end menu part -->
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        
+
+        
+        <!-- footer part -->
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <p><a href="Default.aspx">Home </a> | <a href="about_us.aspx">About Us</a> | <a href="feedback.aspx">Feedback</a> | <a href="/admin/Default.aspx">My Suvidha</a> | <a href="contact.aspx">Contact Us</a></p>
+                        <p>Suvidha Jobs © 2021 All Rights Reserved. Powered By: TheITheaven.com  </p>
+                    </div>
+                    <div class="col-sm-2">
+                        <ul>
+                         <li>
+                                Follow Us: 
+                            </li>
+                            <li>
+                                <a href="http://www.linkedin.com/company/2857332?trk=tyah&trkInfo=tarId%3A1399025737812%2Ctas%3Asuvidha%20pla%2Cidx%3A1-1-1" target="_blank">
+                                    <img src="images/linkdin.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/suvidhaplacements" target="_blank">
+                                    <img src="images/facebook.png">
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>        
+            </div>
+        </footer>
+        <!-- /end footer part -->
+    </form>
+<script type="text/javascript" src="js/plugin.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script> 
+</body>
+</html>

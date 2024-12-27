@@ -1,0 +1,81 @@
+<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/MasterPage_Back.master" EnableEventValidation="false" CodeFile="Resume_Search_Informetion.aspx.cs" Inherits="Resume_Search_Informetion" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<link rel="stylesheet" type="text/css" href="ddsmoothmenu.css" />
+<link rel="stylesheet" type="text/css" href="ddsmoothmenu-v.css" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="ddsmoothmenu.js">
+
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "smoothmenu1", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+ddsmoothmenu.init({
+	mainmenuid: "smoothmenu2", //Menu DIV id
+	orientation: 'v', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu-v', //class added to menu's outer DIV
+	//customtheme: ["#804000", "#482400"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<table width="100%"  border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td height="26" valign="top" class="small_path">Home &gt; <a href="Default.aspx" class="small_path">Administrator</a> &gt; Resume Search</td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;&nbsp;<img src="images/txt_reseume_search.jpg" width="358" height="27" /></td>
+            </tr>
+          </table>
+          
+        
+          <div align="center">
+       
+                            
+                              <asp:GridView ID="GridView1" runat="server" 
+        
+       
+        DataKeyNames="id_txt" onpageindexchanging="GridView1_PageIndexChanging" 
+        onrowcommand="GridView1_RowCommand" onrowcreated="GridView1_RowCreated" 
+        AllowPaging="True" PageSize="15">
+                              <Columns>
+                              <asp:ButtonField ButtonType="Button" CommandName="Detail" HeaderText="Full  Cv" 
+                ShowHeader="True" Text="Detail" />
+                              </Columns>
+                              </asp:GridView>
+                              <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                              <asp:Panel ID="pn101" runat="server" Visible="false">
+                              <asp:GridView ID="GridView2" onrowcreated="GridView2_RowCreated"  runat="server"></asp:GridView>
+                              </asp:Panel></div>
+                                Resume Found:-  <asp:Label ID="resume_found" runat="server"></asp:Label> &nbsp; &nbsp; 
+    <asp:ImageButton ID="export_excel" runat="server" onclick="export_excel_Click" ImageUrl="../images/download.jpg" ToolTip="Export to Excel" 
+        Width="52px" />
+          <br /><br />
+                             </asp:Content>

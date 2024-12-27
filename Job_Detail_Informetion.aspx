@@ -1,0 +1,15 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Job_Detail_Informetion.aspx.cs" MasterPageFile="~/Front_Master.master" Inherits="Job_Detail_Informetion" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1730637-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-1730637-1');
+</script>
+
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">     <span class="text">Job Details</span><br />  <br />               <br /><div align="center">   <table width="95%"  border="0" align="center">          <tr>            <td><div align="justify"><asp:DetailsView ID="DetailsView1" runat="server"                     AllowPaging="True" CellPadding="4" Font-Names="Arial" Font-Size="12px"                     ForeColor="#333333" GridLines="None" Width="650px" FieldHeaderStyle-Width="150px" BorderStyle="Solid"                     BorderWidth="1px" CellSpacing="2"                                 >                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />                <CommandRowStyle BackColor="#E2DED6" Font-Bold="True" />                <RowStyle BackColor="#F7F6F3" ForeColor="#000000" />                <FieldHeaderStyle BackColor="#E9ECF1" Font-Bold="True" />                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />                <EditRowStyle BackColor="#999999" />                <AlternatingRowStyle BackColor="White" ForeColor="#000000" />                </asp:DetailsView></div>              </td>          </tr>          <tr>            <td><asp:DetailsView ID="DetailsView2" runat="server" CellPadding="4"                     Font-Names="Arial" Font-Size="12px" ForeColor="#333333" GridLines="None"                     Width="650px" FieldHeaderStyle-Width="150px" BorderStyle="Solid" BorderWidth="1px" CellSpacing="2"             >                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />                <CommandRowStyle BackColor="#E2DED6" Font-Bold="True" />                <RowStyle BackColor="#F7F6F3" ForeColor="#000000" />                <FieldHeaderStyle BackColor="#E9ECF1" Font-Bold="True" />                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />                <EditRowStyle BackColor="#999999" />                <AlternatingRowStyle BackColor="White" ForeColor="#000000" />                </asp:DetailsView></td>          </tr>          <tr>            <td>    <p>            </p>                          <br />          <asp:Label ID="Label1" runat="server" Text=""></asp:Label>             </td>          </tr>        </table></div>  <br /></asp:Content>

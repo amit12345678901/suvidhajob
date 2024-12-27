@@ -1,0 +1,428 @@
+
+/*------------------------------content-----------------------------------*/
+
+#contentbg{
+	width:100%;
+	margin:0;
+	padding:0;
+	float:left;
+	background:url(../images/contentbg.jpg) top no-repeat;
+}
+.contentblank{
+	width:980px;
+	float:none;
+	padding:0;
+	margin:0 auto;
+}
+.main-cont{
+	width:980px;
+	float:left;
+	height:auto;
+	margin:20px 0;
+}
+.cont-lft{
+	width:250px;
+	height:auto;
+	float:left;
+	padding:0 35px 0 0;
+	background:url(../images/cont-lft.jpg) center right no-repeat;
+}
+.cont-lft-tlt{
+	width:250px;
+	height:35px;
+	float:left;
+	font:24px Franklin Gothic medium;
+	color:#005990;
+	border-bottom:1px dashed #c2c3c3;
+	margin: 0 0 10px 0;
+}
+.cont-lft-bdy{
+	width:250px;
+	height:auto;
+	float:left;
+	margin:10px 0 0 0;
+}
+.cont-lft-bdy ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.cont-lft-bdy ul li{
+	width:240px;
+	margin:1px 0;
+	float:left;
+	font:13px/26px Arial;
+	color:#444;
+	background:url(../images/job-li.jpg);
+}
+.cont-lft-bdy ul li a{
+	width:240px;
+	margin:1px 0;
+	float:left;
+	padding:0 0 0 10px;
+	font:13px/26px Arial;
+	color:#444;
+	background:url(../images/job-li.jpg);
+	text-decoration:none;
+}
+.cont-lft-bdy ul li a:hover{
+	width:240px;
+	margin:1px 0;
+	float:left;
+	padding:0 0 0 10px;
+	font:13px/26px Arial;
+	color:#101010;
+	background:url(../images/job-li_h.jpg);
+}
+.lft-more{
+	width:250px;
+	height:30px;
+	float:left;
+	font:12px/30px Verdana;
+	color:#444;
+	text-align:right;
+}
+.cont-rht{
+	width:675px;
+	height:auto;
+	float:left;
+	padding:0 0 0 20px;
+}
+.cont-rht-top{
+	width:675px;
+	height:auto;
+	float:left;
+	font:13px/20px Arial;
+}
+.cont-rht-btm{
+	width:671px;
+	height:auto;
+	float:left;
+	margin:15px 2px 0 2px;
+}
+.resume{
+	width:212px;
+	height:105px;
+	float:left;
+	background:url(../images/resume.jpg) no-repeat;
+}
+.feedback{
+	width:212px;
+	height:105px;
+	float:left;
+	background:url(../images/feedback.jpg) no-repeat;
+	margin:0 17px;
+}
+.seewhat{
+	width:212px;
+	height:105px;
+	float:left;
+	background:url(../images/see-what.jpg) no-repeat;
+}
+.click-here{
+	width:78px;
+	height:26px;
+	float:left;
+	margin:78px 67px 0 67px;
+}
+.text1{
+	font-family:Calibri;
+	font-size:24px;
+	color:#fff;
+}
+.home_tx{
+	font-family:Verdana;
+	font-size:14px;
+	color:#000;
+}
+
+/*----------------------------------footer-------------------------------*/
+
+#footerbg{
+	width:100%;
+	margin:0;
+	padding:0;
+	float:left;
+	background:#1b1b1b;
+}
+.footerblank{
+	width:980px;
+	float:none;
+	margin:0 auto;
+	padding:0;
+	height:40px;
+}
+.footer{
+	width:650px;
+	height:30px;
+	float:left;
+	margin:5px 0 0 0;
+}
+.footer ul{
+	width:650px;
+	list-style:none;
+	padding:0; 
+	margin:0;
+	float:left;
+}
+.footer ul li{
+	float:left;
+	font:13px Arial;
+	color:#fff;
+	padding:0 5px 0 0;
+}
+.footer ul li a{
+	text-decoration:none;
+	color:#fff;
+}
+.footer ul li a:hover{
+	text-decoration:underline;
+	color:#09F;
+}
+.footer p{
+	width:650px;
+	height:20px;
+	font:11px Arial;
+	color:#fff;
+}
+.share-mn{
+	width:180px;
+	height:30px;
+	float:left;
+	font:18px/30px Tahoma;
+	color:#fff;
+	text-align:right;
+}
+.follow{
+	width:84px;
+	height:30px;
+	float:right;
+	font-size: 14px;
+}
+.share{
+	width:85px;
+	height:30px;
+	float:right;
+}
+.share ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.share ul li{
+	float:right;
+	padding:5px 5px;
+	height:20px;
+	width:20px;
+	margin:0;
+}
+.itheaven{
+	font:11px Arial;
+	color:#fff;
+}
+.itheaven a{
+	text-decoration:none;
+	color:#fff;
+}
+.itheaven a:hover{
+	text-decoration:underline;
+	color:#09F;
+}
+.powered{
+	width:330px;
+	height:30px;
+	padding:5px 0;
+	font:14px/20px Calibri;
+	float:left;
+	text-align:right;
+	color:#8d8d8d;
+}
+.powered a{
+	text-decoration:none;
+	color:#0083d3;
+}
+.powered a:hover{
+	text-decoration:none;
+	color:#fff;
+}
+
+
+/*-------------------------------about page---------------------------------*/
+#aboutbg{
+	width:100%;
+	margin:0;
+	padding:0;
+	float:left;
+	background:url(../images/about-bner.jpg) center;
+}
+#groupbg{
+	width:100%;
+	margin:0;
+	padding:0;
+	float:left;
+	background:url(../images/Suvidha-Group1.jpg) center;
+}
+#employerbg{
+	width:100%;
+	margin:0;
+	padding:0;
+	float:left;
+	background:url(../images/Employer-Zone.jpg) center;
+}
+#candidatebg{
+	width:100%;
+	margin:0;
+	padding:0;
+	float:left;
+	background:url(../images/Jobe-Seeker.jpg) center;
+}
+#careerbg{
+	width:100%;
+	margin:0;
+	padding:0;
+	float:left;
+	background:url(../images/Careers.jpg) center;
+}
+#contactbg{
+	width:100%;
+	margin:0;
+	padding:0;
+	float:left;
+	background:url(../images/Contact-Us.jpg) center;
+}
+.aboutblank{
+	width:980px;
+	height:150px;
+	float:none;
+	margin:0 auto;
+	padding:0;
+}
+.abt-lft{
+	width:250px;
+	height:auto;
+	float:left;
+	background:#fff;
+	padding:8px;
+	border:1px solid #dddedf;
+	box-shadow:inset 0 0 10px #dddedf;
+}
+.abt-lft-bdy{
+	width:250px;
+	height:auto;
+	float:left;
+}
+.abt-lft-bdy ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.abt-lft-bdy ul li{
+	width:250px;
+	margin:1px 0;
+	float:left;
+	font:14px/26px Calibri;
+	color:#444;
+	background:url(../images/job-li.jpg);
+}
+.abt-lft-bdy ul li a{
+	width:240px;
+	margin:1px 0;
+	float:left;
+	padding:0 0 0 10px;
+	font:14px/26px Calibri;
+	color:#444;
+	background:url(../images/job-li.jpg);
+	text-decoration:none;
+}
+.abt-lft-bdy ul li a:hover{
+	width:240px;
+	margin:1px 0;
+	float:left;
+	padding:0 0 0 10px;
+	font:14px/26px Calibri;
+	color:#101010;
+	background:url(../images/job-li_h.jpg);
+}
+.abt-lft-bdy1{
+	width:250px;
+	height:auto;
+	float:left;
+}
+.abt-lft-bdy1 ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.abt-lft-bdy1 ul li{
+	margin:1px 0;
+	float:left;
+	font:14px/26px Calibri;
+	color:#444;
+	background:url(../images/job-li.jpg);
+}
+.abt-lft-bdy1 ul li a{
+	width:230px;
+	margin:1px 0;
+	float:left;
+	padding:0 0 0 10px;
+	font:14px/26px Calibri;
+	color:#444;
+	background:url(../images/job-li.jpg);
+	text-decoration:none;
+}
+.abt-lft-bdy1 ul li a:hover{
+	width:230px;
+	margin:1px 0;
+	float:left;
+	padding:0 0 0 10px;
+	font:14px/26px Calibri;
+	color:#101010;
+	background:url(../images/job-li_h.jpg);
+}
+.abt-rht{
+	width:682px;
+	height:auto;
+	float:left;
+	padding:0 0 0 30px;
+	color:#6b6b6b;
+	text-align:justify;
+}
+
+/*------------------------------------innerpage--------------------------------*/
+
+.inner-cnt{
+	width:960px;
+	height:auto;
+	float:left;
+	padding:0 10px;
+	color:#444;
+	text-align:justify;
+	line-height:18px;
+}
+.category-align {
+    margin:0 0 30px 0;
+}
+.wrapper {
+   width:100%;
+   overflow:hidden;
+}
+.banner2 {
+    width: 100%;
+    height:156px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    background: url(../images/banner2.jpg) center;
+}
+.banner3 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    background: url(../images/banner3.jpg) center;
+}
+.title-img {
+    width:269px;
+    float:left;
+    margin:60px 0 0 0;
+}

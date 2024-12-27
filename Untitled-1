@@ -1,0 +1,187 @@
+
+      <tr>
+        <td bgcolor="#FFFFFF" >Summery</td>
+        <td bgcolor="#FFFFFF" class="style5">
+            <asp:TextBox ID="TextBox48" runat="server" TextMode="MultiLine" 
+            
+            ></asp:TextBox></td>
+      </tr>
+      <tr>
+        <td valign="top" bgcolor="#FFFFFF" >Language</td>
+      <td bgcolor="#FFFFFF" ><div align="left"><asp:TextBox ID="TextBox51" runat="server" 
+            
+            
+            ></asp:TextBox>
+        
+        <asp:CheckBox ID="CheckBox1" runat="server" 
+             
+            Text="Read" />   &nbsp;&nbsp;     
+         <asp:CheckBox ID="CheckBox2" runat="server" 
+             
+            Text="Write" />  &nbsp;&nbsp;      
+        <asp:CheckBox ID="CheckBox3" runat="server" 
+            
+            Text="Speak" /></div>
+        <br />        
+        <asp:TextBox ID="TextBox52" runat="server" 
+            
+            
+            ></asp:TextBox>
+        <asp:CheckBox ID="CheckBox4" runat="server" 
+             
+            Text="Read" />   &nbsp;&nbsp;     
+        <asp:CheckBox ID="CheckBox5" runat="server" 
+          
+            Text="Write" />   &nbsp;&nbsp;     
+        <asp:CheckBox ID="CheckBox6" runat="server" 
+            
+            Text="Speak" />        
+        <br />
+        <br />
+        <asp:TextBox ID="TextBox62" runat="server" 
+            
+            
+            ></asp:TextBox>
+        <asp:CheckBox ID="CheckBox7" runat="server" 
+           
+            Text="Read" /> &nbsp;&nbsp;       
+        <asp:CheckBox ID="CheckBox8" runat="server" 
+            
+            Text="Write" /> &nbsp;&nbsp;       
+        <asp:CheckBox ID="CheckBox9" runat="server" 
+            
+            Text="Speak" />        </td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF" >Job Type</td>
+        <td bgcolor="#FFFFFF" class="style5"><asp:DropDownList ID="DropDownList13" runat="server" 
+            >
+          <asp:ListItem Value="Select"></asp:ListItem>
+          <asp:ListItem Value="Permanent"></asp:ListItem>
+          <asp:ListItem Value="Temporary/Contractual"></asp:ListItem>
+          <asp:ListItem Value="Either"></asp:ListItem>
+        </asp:DropDownList></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF" >Employment Status</td>
+        <td bgcolor="#FFFFFF" class="style5"><asp:DropDownList ID="DropDownList14" runat="server" 
+            >
+             <asp:ListItem>Select</asp:ListItem>
+          <asp:ListItem>Full Time</asp:ListItem>
+          <asp:ListItem Value="Part Time"></asp:ListItem>
+        </asp:DropDownList></td>
+      </tr>
+     
+      <tr>
+        <td bgcolor="#FFFFFF"  >Preferred location   <asp:SqlDataSource ID="AccessDataSource7" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:mycon %>" 
+            SelectCommand="SELECT [city_name] FROM [city_master]"> </asp:SqlDataSource></td>
+        
+        <td bgcolor="#FFFFFF" ><asp:ListBox ID="lstprefer" runat="server" DataSourceID="AccessDataSource1" 
+            DataTextField="city_name" DataValueField="city_name" Height="78px" 
+                SelectionMode="Multiple" Width="253px" 
+            > </asp:ListBox>
+            </td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF" >Referance Name</td>
+        <td bgcolor="#FFFFFF" class="style5"><asp:TextBox ID="TextBox63" runat="server" 
+        
+        
+        ></asp:TextBox></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF" >Refrence Company</td>
+        <td bgcolor="#FFFFFF" class="style5"><asp:TextBox ID="TextBox64" runat="server" 
+        
+        
+        ></asp:TextBox></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF" >Refrence Designation</td>
+        <td bgcolor="#FFFFFF" class="style5"><asp:TextBox ID="TextBox65" runat="server" 
+        
+        
+        ></asp:TextBox></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF"  >Relationship with referrer</td>
+        <td bgcolor="#FFFFFF" ><asp:TextBox ID="TextBox66" runat="server" 
+            
+            ></asp:TextBox></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF"  >Reference Phone</td>
+        <td bgcolor="#FFFFFF" class="style5"><asp:TextBox ID="TextBox68" runat="server"  onkeyup="this.value = this.value.replace(/\D/g, '')"
+            
+            
+            ></asp:TextBox></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF" >Reference Email</td>
+        <td bgcolor="#FFFFFF" class="style5"><asp:TextBox ID="TextBox69" runat="server" 
+            
+            
+            ></asp:TextBox>
+          <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" 
+            ControlToValidate="TextBox69" ErrorMessage="Please enter valid email id" 
+            ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator></td>
+      </tr>
+     
+      <tr>
+        <td bgcolor="#FFFFFF" > Please  Verify  this  word &nbsp; <font color="red">*</font></td>
+      <td bgcolor="#FFFFFF" class="style5">
+      
+       
+     <asp:Image ID="imCaptcha" ImageUrl="~/cap.ashx" runat="server" />
+     <br>
+      
+          <asp:TextBox ID="TextBox71" runat="server" ></asp:TextBox>  <asp:CustomValidator ID="CustomValidator2" runat="server" ControlToValidate="TextBox71"
+            ErrorMessage="You have Entered a Wrong Verification Code!Please Re-enter!!!" OnServerValidate="CAPTCHAValidate"></asp:CustomValidator>   
+          </td>
+      </tr>
+      <tr>
+        <td colspan="2" bgcolor="#FFFFFF">  <div align="center">
+          <asp:Button ID="Button1" runat="server" onclick="Button1_Click"            
+            Text="Submit" />           
+      
+        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+        </div></td>
+        </tr>
+        
+        
+    </table>
+  
+      
+  
+       <asp:SqlDataSource ID="AccessDataSource5" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:mycon %>"
+            SelectCommand="SELECT [ind_name] FROM [industry_master]">
+        </asp:SqlDataSource>  	
+		
+         <asp:SqlDataSource ID="AccessDataSource2" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:mycon %>" SelectCommand="SELECT [year] FROM [year_master]">
+        </asp:SqlDataSource>          
+    
+       <asp:SqlDataSource ID="AccessDataSource4" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:mycon %>" 
+            SelectCommand="SELECT [Professional_Qualification] FROM [Professional_Qua_master]">
+        </asp:SqlDataSource>
+		
+        <asp:SqlDataSource ID="AccessDataSource3" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:mycon %>" 
+            SelectCommand="SELECT [A_Qualification] FROM [Academic_Qualification_master]">
+        </asp:SqlDataSource> 
+   
+        <asp:SqlDataSource ID="AccessDataSource6" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:mycon %>" SelectCommand="SELECT [ctc] FROM [ctc_master]">
+        </asp:SqlDataSource>    
+        <asp:SqlDataSource ID="AccessDataSource8" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:mycon %>" SelectCommand="SELECT [fun_name] FROM [fun]">
+        </asp:SqlDataSource>    
+   
+   </div>
+              </td>
+          </tr>
+        </table>
+   </div> </div> 

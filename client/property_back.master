@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="property_back.master.cs" Inherits="property_back" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <title>Admin  Section</title>
+    <style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #dddddd;
+}
+         .FONT_VIEW
+         {
+             font-family: Verdana;
+             font-size: smaller;
+             color: #666666;
+         }
+         .FONT_RED
+         {
+             font-family: VERdana;
+             font-size: small;
+             color: #800000;
+             text-align:left;
+         }
+         .sidemenu_bold
+         {
+             font-family: verdana;
+             font-size: small;
+             font-weight: bold;
+             text-align:left;
+             color: #666666;
+             text-decoration: none;
+         }
+         .side_menu
+         {
+             font-family: verdana;
+             text-align:left;
+             font-size: small;
+             font-weight: normal;
+             color: #666666;
+             text-decoration: none;
+         }
+    
+         .welcome
+         {
+             font-family: verdana;
+             font-size: x-large;
+             font-weight: bold;
+             color: #800000;
+         }
+         -->
+</style>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <table width="962" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+   
+  </tr>
+  <tr>
+    <td height="500" valign="top" background="Images/center.jpg"><div align="center">
+   
+      <table width="914" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="200" height="255" valign="top"><table width="100%" align="left" border=1 cellpadding="2" cellspacing="1" bordercolordark="#FFFFFF" bordercolorlight="#CCCCCC">
+                        <tr>
+                            <td colspan="2" align="left" class="sidemenu_bold">
+                                Manage Administrator Accounts</td>
+                        </tr>
+                        <tr>
+                            <td width="31%" rowspan="2"  >&nbsp;
+                                </td>
+                          <td width="69%" align="left"  >
+                              <a href="Admin_add.aspx" class="side_menu">Add</a> </td>
+                        </tr>
+                        <tr>
+                            <td  align="left" >
+                 
+                              <a href="Admin_update.aspx" class="side_menu">Edit</a> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="2" class="sidemenu_bold">
+                                Manage&nbsp; Cvsearch</td>
+                        </tr>
+                        <tr>
+                            <td  rowspan="2">&nbsp;
+                                </td>
+                          <td  align="left">
+                    
+                    <a href="Add_Cvsearch.aspx" class="side_menu">Add</a> </td>
+                        </tr>
+                        <tr>
+                          <td  align="left">
+                    
+                    <a href="Edit_Cvsearch.aspx" class="side_menu">Edit</a> </td>
+                        </tr>
+                        
+                        
+                        
+                        
+                        
+                        <tr>
+                           <td  rowspan="1">&nbsp;
+                                </td>
+                          <td  align="left">
+                                <a href="Logout.aspx" class="side_menu">Logout </a> </td>
+                        </tr>
+                    </table></td>
+          <td width="1" bgcolor="#999999"></td>
+          <td valign="top">
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    </div></td>
+  </tr>
+  <tr>
+    <td height="49" background="Images/bottom.jpg">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

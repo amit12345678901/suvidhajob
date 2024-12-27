@@ -1,0 +1,117 @@
+.main-form input[type="text"],
+.main-form textarea,
+.main-form select,
+.main-form input[type="password"]{
+  background:#f1f1f1;
+  border:1px solid #EAE6E1;
+  padding:7px 15px;
+  border-radius:3px;
+  width:100%;
+  margin:5px 0;
+  outline:medium none;
+  color:#838383;
+  min-height: 42px;
+}
+.main-form input[type="checkbox"]{
+  -webkit-appearance:none;
+  width:10px;
+  height:10px;
+  position:relative;
+  outline:medium none;
+  margin-right:10px;
+}
+.main-form input[type="checkbox"]::before{
+  width:15px;
+  height:15px;
+  content:"";
+  display:block;
+  border:3px solid #C4BCB0;
+  border-radius: 9px;
+  position:absolute;
+}
+.main-form input[type="checkbox"]:checked::after{
+  width:5px;
+  height:5px;
+  content:"";
+  display:block;
+  background: #C4BCB0;
+  border-radius: 5px;
+  position:absolute;
+  left:5px;
+  top:5px;
+}
+.main-form button[type="submit"]{
+  display:block;
+  padding:10px;
+  background:#f18e1e;
+  border:0;
+  border-radius:3px;
+  width:100%;
+  color:#fff;
+  cursor:pointer;
+  -webkit-transition:all 0.3s;
+  -moz-transition:all 0.3s;
+  transition:all 0.3s;
+}
+.main-form input[type="submit"]:hover{
+  background:#58CCB0;
+}
+.main-form{
+  margin: 0 auto 10px;
+  padding: 30px 50px;
+  border: 1px solid rgba(0,0,0,0.1);
+  -webkit-box-shadow:0 1px 2px rgba(0,0,0,0.2);
+  background:#fff;
+    text-align: center;
+}
+.main-form img{
+    margin-bottom: 20px;
+}
+.main-form h3{
+    color: #a84a9a;
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 15px;
+}
+.main-form > label{
+  display:block;
+  margin:10px 0 15px;
+  line-height:15px;
+  cursor:pointer;
+    font-weight: normal;
+}
+
+.main-form > a{
+  font-size:12px;
+  display:block;
+  text-align:center;
+  margin:10px 0;
+  color: #a2a2a2;
+}
+.main-form th{
+    text-align: center;
+}
+.main-form > div >a:nth-child(2){
+  border:1px solid #f18e1e;
+  display:inline-block;
+  border-radius:3px;
+  color:#f18e1e;
+  font-weight:bold;
+  padding:7px 15px;
+  margin-left:28px;
+  -webkit-transition:all 0.3s;
+  -moz-transition:all 0.3s;
+  transition:all 0.3s;
+}
+.main-form > div >a:nth-child(2):hover{
+  background:#f18e1e;
+  color:#fff;
+}
+
+
+
+
+
+
+/*  */

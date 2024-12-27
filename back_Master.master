@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Front_Master.master.cs" Inherits="placement_Front_Master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+ <title>Suvidha Jobs</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+  
+<div id="wrapper">
+<!---------------------------------header----------------------------->
+<div id="headerbg">
+<div class="headerblank">
+<div class="logo"><a href="Default.aspx"><img src="images/logo.png" width="258" height="74" border="0" /></a></div>
+<div class="login-pg">
+<div class="login-btn">Call Us : +91 33 2215 0852</div>
+<div id="log_main">
+<div id="log_nm"></div>
+<div id="log_bx"></div>
+</div>
+
+</div>
+</div>
+</div>
+<!---------------------------------menu----------------------------->
+<div id="menubg">
+<div class="menublank">
+<div class="menu">
+<ul>
+		<li><a href="default.aspx">Home</a></li>
+            <div class="saparation"></div>
+			<li><a href="about_us.aspx">About Us</a></li>
+            <div class="saparation"></div>
+            
+            <div class="saparation"></div>
+            <li><a href="Employer_Login.aspx">Employer Zone</a></li>
+            <div class="saparation"></div>
+			<li><a href="CandidateZone_Login1.aspx">Job Seeker</a></li>
+            <div class="saparation"></div>
+			<li><a href="career.aspx">Careers</a></li>
+            <div class="saparation"></div>
+            <li><a href="links.aspx">Related Links</a></li>
+            <div class="saparation"></div>
+            <li><a href="contact.aspx">Contact Us</a></li>
+		</ul>
+</div>
+</div>
+</div>
+
+
+   <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+		
+        </asp:ContentPlaceHolder>
+
+
+<!----------------------------------footer---------------------------------------->
+<div id="footerbg">
+<div class="footerblank">
+  <div class="footer">
+<ul>
+				<li><a href="Default.aspx">Home </a>|</li>
+				<li><a href="about_us.aspx">About Us</a> |</li>
+				<li><a href="feedback.aspx">Feedback</a> |</li>
+                <li><a href="/admin/Default.aspx">My Suvidha</a> |</li>
+                <li><a href="contact.aspx">Contact Us</a></li>
+		</ul>
+            <p>All contents @ copyright 2013 Suvidha Jobs All rights reserved</p>
+</div>
+<div class="powered">
+<div class="share-mn">
+<div class="share"><ul>
+<li><a href="#"><img src="images/google.png" border="0" height="30" width="30"></a></li>
+<li><a href="#"><img src="images/twitter.png" border="0" height="30" width="30"></a></li>
+<li><a href="#"><img src="images/facebook.png" border="0" height="30" width="30"></a></li>
+</ul></div>
+<div class="follow">Follow Us</div>
+</div>
+<div class="itheaven">Powered by: www.theitheaven.com</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+
+  
+  
+  
+    </form>
+</body>
+</html>

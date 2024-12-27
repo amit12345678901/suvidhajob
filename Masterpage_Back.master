@@ -1,0 +1,131 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Masterpage_Back.master.cs" Inherits="Masterpage_Back" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>:: Suvidha Jobs, Admin Section ::</title>
+    
+    <style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #2e363f;
+}
+      
+         -->
+</style>
+    
+	
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div align="center">
+   <table width="1000px"  border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF"  align="center">
+  <tr>
+    <td bgcolor="#ffffff" height="60px" ><img src="../images/logo.png"></td>
+  </tr>
+  <tr><td bgcolor="414141">
+
+  <div id="smoothmenu1" class="ddsmoothmenu">
+<ul>
+<li><a href="Admin_Main.aspx">Home</a></li>
+<asp:Panel ID="admin_pn" runat="server">
+<li><a href="#">System User</a>
+  <ul>
+  <li><a href="Admin_add.aspx">Add</a></li>
+  <li><a href="Admin_Edit.aspx">Edit</a></li>
+  </ul>
+</li>
+</asp:Panel>
+<asp:Panel ID="cand_main_pn" runat="server">
+<li><a href="#">Candidate</a>
+  <ul>
+  <asp:Panel ID="cand_add_pn" runat="server"><li><a href="PostResume1.aspx">Add</a></li></asp:Panel>
+  <asp:Panel ID="cand_edit_pn" runat="server"><li><a href="Edit_Candidate.aspx">Edit</a></li></asp:Panel>
+  </ul>
+</li>
+</asp:Panel>
+<asp:Panel ID="emp_main_pn" runat="server">
+<li><a href="#">Clients</a>
+<ul>
+  <asp:Panel ID="emp_add_pn" runat="server"><li><a href="Edit_Company.aspx?cat=inter">Internal</a></li></asp:Panel>
+  <asp:Panel ID="emp_edit_pn" runat="server"><li><a href="Edit_Company.aspx?cat=exter">External</a></li></asp:Panel>
+  </ul>
+
+</li>
+</asp:Panel>
+<asp:Panel ID="vac_main_pn" runat="server">
+<li><a href="#">Job Postings</a>
+  <ul>
+  <asp:Panel ID="vac_add_pn" runat="server"> <li><a href="Edit_Vacancy.aspx?cat=inter">Internal Posting</a></li></asp:Panel>
+  <asp:Panel ID="vac_edit_pn" runat="server"><li><a href="Edit_Vacancy.aspx?cat=exter">External Posting</a></li></asp:Panel>
+  </ul>
+</li>
+</asp:Panel>
+<asp:Panel ID="resume_main_pn" runat="server">
+<li><a href="#">Resume Search</a>
+  <ul>
+  <li><a href="Resume_Search_Form.aspx">Search</a></li>
+ 
+  </ul>
+</li>
+</asp:Panel>
+
+<asp:Panel ID="pnjob_order" runat="server">
+<li><a href="#">Job Order</a>
+  <ul>
+  <asp:Panel ID="pnjob_order_add" runat="server"><li><a href="job_order.aspx">Job Order Issue</a></li></asp:Panel>
+  <asp:Panel ID="pnjob_order_edit" runat="server"><li><a href="job_order_edit.aspx">Job Order Edit</a></li></asp:Panel>
+  </ul>
+</li>
+</asp:Panel>
+
+<asp:Panel ID="admin_pn1" runat="server">
+<li><a href="#">Job applied by Candidate</a>
+  <ul>
+  <li><a href="Company_Apply_Informetion.aspx">Details</a></li>
+ 
+  </ul>
+</li>
+</asp:Panel>
+    <li><a href="Logout.aspx">Logout</a></li>
+    </ul>
+<br style="clear: left" />
+</div>
+
+</td></tr>
+   <tr>
+    <td><table width="1000"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        
+        
+        <td  height="545"  valign="top">
+		
+		
+		 <form id="form2" runat="server">
+    <div class="home_tx">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+		
+		
+		</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    
+  </tr>
+</table>
+  </div>
+</body>
+</html>
+

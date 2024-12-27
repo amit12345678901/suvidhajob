@@ -1,0 +1,45 @@
+.form-group-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust spacing between fields */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 30%; /* Adjust width as needed */
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.feedback-label {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.loading-spinner {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 60px;
+}
