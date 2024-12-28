@@ -348,7 +348,7 @@ public partial class post_vaca_add : System.Web.UI.Page
             {
                 TextBox21.Text = "0";
             }
-            m.CommandText = "insert into post_vaca values(@pv_id_txt,@cid,@cname_txt,@cprofile_txt,@des_txt,@cp_txt,@add_txt,@city_txt,@country_txt,@phone_txt,@fax_txt,@email_txt,@in_txt,@fa_txt,@sfa_txt,@jp_txt,@keyword_txt,@rep_txt,@conprofile_txt,@jobr_txt,@novacc_txt,@gender_txt,@year_min_txt,@year_max_txt,@jobt_txt,@aqr_txt,@pqr_txt,@ab_txt,@salary_txt,@tat_txt,@loc_txt,@jobcode_txt,@post_date,@dis_ind_txt,@hidden_txt,@category,@jobt,@spec,@benift,@salary_txt_max)";
+            m.CommandText = "insert into post_vaca values(@pv_id_txt,@cid,@cname_txt,@cprofile_txt,@des_txt,@cp_txt,@add_txt,@city_txt,@country_txt,@phone_txt,@fax_txt,@email_txt,@in_txt,@fa_txt,@sfa_txt,@keyword_txt,@rep_txt,@novacc_txt,@gender_txt,@year_min_txt,@year_max_txt,@jobt_txt,@aqr_txt,@pqr_txt,@ab_txt,@salary_txt,@tat_txt,@loc_txt,@jobcode_txt,@post_date,@dis_ind_txt,@hidden_txt,@category,@jobt,@benift,@salary_txt_max)";
 
             string lst1 = listfind(ListBox3);
           //  string lst2 = listfind(ListBox1);
@@ -375,12 +375,12 @@ public partial class post_vaca_add : System.Web.UI.Page
             m.Parameters.AddWithValue("@in_txt", lst5);
             m.Parameters.AddWithValue("@fa_txt", DropDownList15.SelectedValue);
             m.Parameters.AddWithValue("@sfa_txt", lst6);
-            m.Parameters.AddWithValue("@jp_txt", jobspc.Text.ToString().Trim().Replace("'", "''"));
+            // m.Parameters.AddWithValue("@jp_txt", jobspc.Text.ToString().Trim().Replace("'", "''"));
             m.Parameters.AddWithValue("@keyword_txt", TextBox15.Text.ToString().Trim().Replace("'", "''"));
             m.Parameters.AddWithValue("@rep_txt", TextBox14.Text.ToString().Trim().Replace("'", "''"));
-            m.Parameters.AddWithValue("@conprofile_txt", TextBox17.Text.ToString().Trim().Replace("'", "''"));
+            // m.Parameters.AddWithValue("@conprofile_txt", TextBox17.Text.ToString().Trim().Replace("'", "''"));
 
-            m.Parameters.AddWithValue("@jobr_txt", TextBox18.Text.ToString().Trim().Replace("'", "''"));
+            // m.Parameters.AddWithValue("@jobr_txt", TextBox18.Text.ToString().Trim().Replace("'", "''"));
             m.Parameters.AddWithValue("@novacc_txt", TextBox19.Text.ToString().Trim().Replace("'", "''"));
             m.Parameters.AddWithValue("@gender_txt", DropDownList2.Text.ToString().Trim().Replace("'", "''"));
 
@@ -395,13 +395,14 @@ public partial class post_vaca_add : System.Web.UI.Page
             m.Parameters.AddWithValue("@tat_txt", TextBox26.Text.ToString().Trim().Replace("'", "''"));
             m.Parameters.AddWithValue("@loc_txt", lst3);
             m.Parameters.AddWithValue("@jobcode_txt", TextBox28.Text.ToString().Trim().Replace("'", "''"));
-            m.Parameters.AddWithValue("@post_date", DateTime.Now.ToString());
+            // m.Parameters.AddWithValue("@post_date", DateTime.Now.ToString());
+            m.Parameters.AddWithValue("@post_date", DateTime.Now); // Correctly pass DateTime object
             m.Parameters.AddWithValue("@dis_ind_txt", 1);
             m.Parameters.AddWithValue("@hidden_txt", 0);
 
             m.Parameters.AddWithValue("@category", jobin.SelectedValue);
             m.Parameters.AddWithValue("@jobt", jobtl.Text.ToString().Trim().Replace("'", "''"));
-            m.Parameters.AddWithValue("@spec", jobspc.Text.ToString().Trim().Replace("'", "''"));
+            // m.Parameters.AddWithValue("@spec", jobspc.Text.ToString().Trim().Replace("'", "''"));
             m.Parameters.AddWithValue("@benift", benetits.Text.ToString().Trim().Replace("'", "''"));
            // m.Parameters.AddWithValue("@benift", benetits.Text.ToString().Trim().Replace("'", "''"));
 
@@ -417,7 +418,7 @@ public partial class post_vaca_add : System.Web.UI.Page
 
 
             jobtl.Text = "";
-            jobspc.Text = "";
+            // jobspc.Text = "";
             benetits.Text = "";
 
 
@@ -430,8 +431,8 @@ public partial class post_vaca_add : System.Web.UI.Page
             TextBox14.Text = "";
             TextBox15.Text = "";
             TextBox16.Text = "";
-            TextBox17.Text = "";
-            TextBox18.Text = "";
+            // TextBox17.Text = "";
+            // TextBox18.Text = "";
             TextBox19.Text = "";
             TextBox20.Text = "";
             TextBox21.Text = "";
