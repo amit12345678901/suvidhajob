@@ -40,7 +40,7 @@ public partial class _aboutus : System.Web.UI.Page
 
     public void show()
     {
-        dt = g1.return_dt("SELECT  cast(year_min_txt as varchar) + '-'  +  cast(year_max_txt as varchar)as Experience,pv_id_txt,in_txt,post_date,loc_txt,jobr_txt,jp_txt,year_min_txt,year_max_txt,fa_txt,keywords_txt,aqr_txt,pqr_txt,ab_txt,salary_txt,rep_txt,jp_txt  FROM   [post_vaca] where hidden_txt=0 " + career + " order by pv_id_txt desc");
+        dt = g1.return_dt("SELECT  cast(year_min_txt as varchar) + '-'  +  cast(year_max_txt as varchar)as Experience,pv_id_txt,in_txt,post_date,loc_txt,year_min_txt,year_max_txt,fa_txt,keywords_txt,aqr_txt,pqr_txt,ab_txt,salary_txt,rep_txt  FROM   [post_vaca] where hidden_txt=0 " + career + " order by pv_id_txt desc");
        
         if (dt.Rows.Count > 0)
         {
@@ -50,7 +50,7 @@ public partial class _aboutus : System.Web.UI.Page
             indus = Convert.ToString(dt.Rows[0]["in_txt"]);
             loc = Convert.ToString(dt.Rows[0]["loc_txt"]);
             loc = loc.Replace("<br/>", ",");
-            spc = Convert.ToString(dt.Rows[0]["jp_txt"]);
+            // spc = Convert.ToString(dt.Rows[0]["jp_txt"]);
             key = Convert.ToString(dt.Rows[0]["keywords_txt"]);
             pid1 = Convert.ToString(dt.Rows[0]["pv_id_txt"]); 
 

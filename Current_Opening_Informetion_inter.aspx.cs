@@ -48,7 +48,7 @@ public partial class Current_opening : System.Web.UI.Page
              acquali = Convert.ToString(dt.Rows[0]["aqr_txt"]);
              profess = Convert.ToString(dt.Rows[0]["pqr_txt"]);
              jobname = Convert.ToString(dt.Rows[0]["cname_txt"]);
-             profile = Convert.ToString(dt.Rows[0]["conprofile_txt"]);
+             //profile = Convert.ToString(dt.Rows[0]["conprofile_txt"]);
              addr = Convert.ToString(dt.Rows[0]["add_txt"]);
              expmin = Convert.ToString(dt.Rows[0]["year_min_txt"]);
              expmax = Convert.ToString(dt.Rows[0]["year_max_txt"]);
@@ -56,10 +56,10 @@ public partial class Current_opening : System.Web.UI.Page
              ctcto = Convert.ToString(dt.Rows[0]["salary_txt_max"]);
              keyskill = Convert.ToString(dt.Rows[0]["keywords_txt"]);
              quli = Convert.ToString(dt.Rows[0]["aqr_txt"]);
-             specific = Convert.ToString(dt.Rows[0]["jp_txt"]);
+             //specific = Convert.ToString(dt.Rows[0]["jp_txt"]);
              jobfunc = Convert.ToString(dt.Rows[0]["fun_name"]);
              industry = Convert.ToString(dt.Rows[0]["in_txt"]);
-             description = Convert.ToString(dt.Rows[0]["jobr_txt"]);
+            //  description = Convert.ToString(dt.Rows[0]["jobr_txt"]);
              jobposition = Convert.ToString(dt.Rows[0]["rep_txt"]);
              location = Convert.ToString(dt.Rows[0]["loc_txt"]);
              

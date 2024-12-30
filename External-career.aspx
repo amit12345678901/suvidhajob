@@ -332,7 +332,6 @@ div#popup_content iframe { width: 674px; height: 498px;}
   
 
   <h3 class="new_h">Desired Candidate Profile</h3><br clear="both">
-<p class="nw_p"><%= specific %></p>
   <div class="nw_all">
   		<div class="nw_cont_lft">Academic Qualification:</div>
         <div class="nw_cont_rgt">

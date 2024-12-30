@@ -30,7 +30,7 @@ public partial class Quick_jobs_Search_Informetion : System.Web.UI.Page
         }
         else
         {
-            key = " and (keywords_txt like '%" + Request.Cookies["t1"].Value + "%' or in_txt   like '%" + Request.Cookies["t1"].Value + "%' or fa_txt like '%" + Request.Cookies["t1"].Value + "%' or sfa_txt like '%" + Request.Cookies["t1"].Value + "%' or cname_txt like '%" + Request.Cookies["t1"].Value + "%' or cprofile_txt like '%" + Request.Cookies["t1"].Value + "%' or cp_txt like '%" + Request.Cookies["t1"].Value + "%' or jp_txt like '%" + Request.Cookies["t1"].Value + "%' or rep_txt like '%" + Request.Cookies["t1"].Value + "%' or gender_txt like '%" + Request.Cookies["t1"].Value + "%' or jobt_txt like '%" + Request.Cookies["t1"].Value + "%' or aqr_txt like '%" + Request.Cookies["t1"].Value + "%' or pqr_txt like '%" + Request.Cookies["t1"].Value + "%' or jobt like '%" + Request.Cookies["t1"].Value + "%') ";
+            key = " and (keywords_txt like '%" + Request.Cookies["t1"].Value + "%' or in_txt   like '%" + Request.Cookies["t1"].Value + "%' or fa_txt like '%" + Request.Cookies["t1"].Value + "%' or sfa_txt like '%" + Request.Cookies["t1"].Value + "%' or cname_txt like '%" + Request.Cookies["t1"].Value + "%' or cprofile_txt like '%" + Request.Cookies["t1"].Value + "%' or cp_txt like '%" + Request.Cookies["t1"].Value + "%' or rep_txt like '%" + Request.Cookies["t1"].Value + "%' or gender_txt like '%" + Request.Cookies["t1"].Value + "%' or jobt_txt like '%" + Request.Cookies["t1"].Value + "%' or aqr_txt like '%" + Request.Cookies["t1"].Value + "%' or pqr_txt like '%" + Request.Cookies["t1"].Value + "%' or jobt like '%" + Request.Cookies["t1"].Value + "%') ";
         }
         if (Request.Cookies["t2"].Value != "")
         {
@@ -59,14 +59,14 @@ public partial class Quick_jobs_Search_Informetion : System.Web.UI.Page
         if (Request.Cookies["t2"].Value == "")
         {
 
-           dt = g1.return_dt("SELECT  cast(year_min_txt as varchar) + '-'  +  cast(year_max_txt as varchar)as Experience,cast(salary_txt  as varchar) + '-'  +  cast(salary_txt_max  as varchar) as ctc,pv_id_txt,in_txt,post_date,loc_txt,jobr_txt,jp_txt,year_min_txt,year_max_txt,fa_txt,novacc_txt,rep_txt,keywords_txt,jp_txt,cname_txt  from post_vaca  where hidden_txt=0 and category!='1' and year_min_txt<=" + 100 + " and year_max_txt>=" + 0 + loc + fun + key+"");
+           dt = g1.return_dt("SELECT  cast(year_min_txt as varchar) + '-'  +  cast(year_max_txt as varchar)as Experience,cast(salary_txt  as varchar) + '-'  +  cast(salary_txt_max  as varchar) as ctc,pv_id_txt,in_txt,post_date,loc_txt,year_min_txt,year_max_txt,fa_txt,novacc_txt,rep_txt,keywords_txt,cname_txt  from post_vaca  where hidden_txt=0 and category!='1' and year_min_txt<=" + 100 + " and year_max_txt>=" + 0 + loc + fun + key+"");
         
 
         }
         else
         {
 
-           dt = g1.return_dt("SELECT cast(year_min_txt as varchar) + '-'  +  cast(year_max_txt as varchar)as Experience,cast(salary_txt  as varchar) + '-'  +  cast(salary_txt_max  as varchar) as ctc,pv_id_txt,in_txt,post_date,loc_txt,jobr_txt,jp_txt,year_min_txt,year_max_txt,fa_txt,novacc_txt,rep_txt,keywords_txt,jp_txt,cname_txt  from post_vaca  where hidden_txt=0 and category!='1' and year_min_txt<=" + Int32.Parse(exp) + " and year_max_txt>=" + Int32.Parse(exp) + loc + fun + key+"");
+           dt = g1.return_dt("SELECT cast(year_min_txt as varchar) + '-'  +  cast(year_max_txt as varchar)as Experience,cast(salary_txt  as varchar) + '-'  +  cast(salary_txt_max  as varchar) as ctc,pv_id_txt,in_txt,post_date,loc_txt,year_min_txt,year_max_txt,fa_txt,novacc_txt,rep_txt,keywords_txt,cname_txt  from post_vaca  where hidden_txt=0 and category!='1' and year_min_txt<=" + Int32.Parse(exp) + " and year_max_txt>=" + Int32.Parse(exp) + loc + fun + key+"");
 
         }
 
@@ -78,7 +78,7 @@ public partial class Quick_jobs_Search_Informetion : System.Web.UI.Page
             indus = Convert.ToString(dt.Rows[0]["in_txt"]);
             loc1 = Convert.ToString(dt.Rows[0]["loc_txt"]);
             loc1 = loc1.Replace("<br/>", ",");
-            spc = Convert.ToString(dt.Rows[0]["jp_txt"]);
+            // spc = Convert.ToString(dt.Rows[0]["jp_txt"]);
             key1 = Convert.ToString(dt.Rows[0]["keywords_txt"]);
             pid1 = Convert.ToString(dt.Rows[0]["pv_id_txt"]);
             companyName = Convert.ToString(dt.Rows[0]["cname_txt"]);
@@ -87,7 +87,7 @@ public partial class Quick_jobs_Search_Informetion : System.Web.UI.Page
             //GridView1.DataBind();
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                crview += "<div class=wrpCB><div class=jRes><a class=l_j aK href='Current_Opening_Informetion_inter.aspx?pin=" + Convert.ToString(dt.Rows[i]["pv_id_txt"]) + "' title=View &amp; Apply  id=><strong>" + Convert.ToString(dt.Rows[i]["rep_txt"]) + "<span> (" + Convert.ToString(dt.Rows[i]["Experience"]) + " yrs.)</span></strong><i>" + Convert.ToString(dt.Rows[i]["loc_txt"]).Replace("<br/>", ",") + " </i><em> " + Convert.ToString(dt.Rows[i]["jp_txt"]) + "</em><em><span class=f12>Keyskills:</span> " + Convert.ToString(dt.Rows[i]["keywords_txt"]) + "</em>   </a></div></div>";
+                crview += "<div class=wrpCB><div class=jRes><a class=l_j aK href='Current_Opening_Informetion_inter.aspx?pin=" + Convert.ToString(dt.Rows[i]["pv_id_txt"]) + "' title=View &amp; Apply  id=><strong>" + Convert.ToString(dt.Rows[i]["rep_txt"]) + "<span> (" + Convert.ToString(dt.Rows[i]["Experience"]) + " yrs.)</span></strong><i>" + Convert.ToString(dt.Rows[i]["loc_txt"]).Replace("<br/>", ",") + " </i><em> " + Convert.ToString(dt.Rows[i]["keywords_txt"]) + "</em>   </a></div></div>";
             }
         }
 
