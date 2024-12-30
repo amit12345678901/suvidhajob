@@ -151,8 +151,10 @@ public partial class Employer_Registation : System.Web.UI.Page
                     m.Parameters.AddWithValue("@username_txt", username1);
                     m.Parameters.AddWithValue("@password_txt", "NILL");
                     m.Parameters.AddWithValue("@terms_txt", "aaaa");
-                    m.Parameters.AddWithValue("@start_date", DateTime.Now.ToShortDateString());
-                    m.Parameters.AddWithValue("@end_date", DateTime.Now.AddDays(365).ToShortDateString());
+                    //m.Parameters.AddWithValue("@start_date", DateTime.Now.ToShortDateString());
+                    m.Parameters.AddWithValue("@start_date", DateTime.Now);
+                    //m.Parameters.AddWithValue("@end_date", DateTime.Now.AddDays(365).ToShortDateString());
+                    m.Parameters.AddWithValue("@end_date", DateTime.Now.AddDays(365));
                     m.Parameters.AddWithValue("@auth_txt", 0);
                     m.Parameters.AddWithValue("@mail_auth", 0);
                     m.Parameters.AddWithValue("@rs_auth", 0);
@@ -232,6 +234,8 @@ public partial class Employer_Registation : System.Web.UI.Page
         private const int SmtpPort = 25;
         private const string FromEmail = "noreply@suvidhajobs.in";
         private const string EmailPassword = "Norp@4521*";
+        private const string AdminEmail = "maityamit2024@gmail.com";
+
 
         public void mail(string to, string name)
         {

@@ -141,27 +141,39 @@ public partial class Default : System.Web.UI.Page
 
     public void show()
     {
-        dt = g1.return_dt("SELECT top 5 cast(year_min_txt as varchar) + '-'  +  cast(year_max_txt as varchar)as Experience,cast(salary_txt  as varchar) + '-'  +  cast(salary_txt_max  as varchar) as ctc,pv_id_txt,in_txt,post_date,loc_txt,jobr_txt,jp_txt,year_min_txt,year_max_txt,fa_txt,novacc_txt,rep_txt,keywords_txt,jp_txt  FROM   [post_vaca] where hidden_txt=0 and category='3' order by pv_id_txt desc");
-        jobdtl.Length = 0;
-        for (int i = 0; i < dt.Rows.Count; i++)
+        try
         {
-            //GridView1.DataSource = dt;
-            //GridView1.DataBind();
+            dt = g1.return_dt("SELECT TOP 5 ISNULL(CAST(year_min_txt AS varchar), '0') + '-' + ISNULL(CAST(year_max_txt AS varchar), '0') AS Experience, ISNULL(CAST(salary_txt AS varchar), '0') + '-' + ISNULL(CAST(salary_txt_max AS varchar), '0') AS ctc, pv_id_txt, ISNULL(in_txt, 'Unknown Industry') AS in_txt, post_date, ISNULL(loc_txt, 'Unknown Location') AS loc_txt, year_min_txt, year_max_txt, fa_txt, novacc_txt, rep_txt, ISNULL(keywords_txt, 'None') AS keywords_txt FROM [post_vaca] WHERE hidden_txt = 0 AND category = '3' ORDER BY pv_id_txt DESC");
 
-            opening = Convert.ToString(dt.Rows[i]["rep_txt"]);
-            exper = Convert.ToString(dt.Rows[i]["Experience"]);
-            indus = Convert.ToString(dt.Rows[i]["in_txt"]);
-            loc = Convert.ToString(dt.Rows[i]["loc_txt"]);
-            loc = loc.Replace("<br/>", ",");
-            spc = Convert.ToString(dt.Rows[i]["jp_txt"]);
-            key = Convert.ToString(dt.Rows[i]["keywords_txt"]);
-            pid1 = Convert.ToString(dt.Rows[i]["pv_id_txt"]);
+            jobdtl.Length = 0;
 
-            jobdtl.Append("<div class='c-item'><a class='l_j aK' href='External-career.aspx?pin=" + pid1 + "' title='View &amp; Apply'  id=''><strong>" + opening + "<span> (" + exper + " yrs.)</span></strong><dfn>" + indus + "</dfn><br>" + loc + "<br> " + spc + "<br><span class='f12'><b>Keyskills:</b></span> " + key + "</a></div>");
+            if (dt == null || dt.Rows.Count == 0)
+            {
+                jobdtl.Append("<div>No job openings available at the moment.</div>");
+                return;
+            }
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string opening = dt.Rows[i]["rep_txt"] != null ? dt.Rows[i]["rep_txt"].ToString() : "Not Available";
+                string exper = dt.Rows[i]["Experience"] != null ? dt.Rows[i]["Experience"].ToString() : "0-0";
+                string indus = dt.Rows[i]["in_txt"] != null ? dt.Rows[i]["in_txt"].ToString() : "Unknown Industry";
+                string loc = dt.Rows[i]["loc_txt"] != null ? dt.Rows[i]["loc_txt"].ToString().Replace("<br/>", ",") : "Unknown Location";
+                // string spc = dt.Rows[i]["jp_txt"] != null ? dt.Rows[i]["jp_txt"].ToString() : "Not Specified";
+                string key = dt.Rows[i]["keywords_txt"] != null ? dt.Rows[i]["keywords_txt"].ToString() : "None";
+                string pid1 = dt.Rows[i]["pv_id_txt"] != null ? dt.Rows[i]["pv_id_txt"].ToString() : string.Empty;
+
+                jobdtl.Append("<div class='c-item'><a class='l_j aK' href='External-career.aspx?pin=" + pid1 + "' title='View &amp; Apply'><strong>" + opening + "<span> (" + exper + " yrs.)</span></strong><dfn>" + indus + "</dfn><br>" + loc + "<br> " + spc + "<br><span class='f12'><b>Keyskills:</b></span> " + key + "</a></div>");
+            }
         }
-
-
+        catch (Exception ex)
+        {
+            jobdtl.Append("<div>An error occurred while loading job openings. Please try again later.</div>");
+            jobdtl.Append("<div>Error occurred: " + ex.Message + "</div>");
+            Console.WriteLine("Stack Trace: " + ex.StackTrace);
+        }
     }
+
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         switch (e.CommandName)
@@ -270,7 +282,7 @@ public partial class Default : System.Web.UI.Page
         if (HiddenField1.Value == "Manufacturing")
         {
             Session["indname"] = HiddenField1.Value;
-           // Session["indnameNew"] = DropDownList1.SelectedItem.ToString().Trim();
+            // Session["indnameNew"] = DropDownList1.SelectedItem.ToString().Trim();
             Response.Redirect("Job_Catagories_Informetion.aspx");
         }
 
@@ -307,7 +319,7 @@ public partial class Default : System.Web.UI.Page
             Session["indnameNew"] = DropDownList1.SelectedItem.ToString().Trim();
             Response.Redirect("Job_Catagories_Informetion.aspx");
         }
-    } 
+    }
     protected void btnSteel_Click(object sender, EventArgs e)
     {
         if (HiddenField5.Value == "Steel & Power")

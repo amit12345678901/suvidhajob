@@ -37,7 +37,7 @@ public partial class External_careerdetails : System.Web.UI.Page
 
     public void show()
     {
-        dt = g1.return_dt("SELECT  cast(year_min_txt as varchar) + '-'  +  cast(year_max_txt as varchar)as Experience,cast(salary_txt  as varchar) + '-'  +  cast(salary_txt_max  as varchar) as ctc,pv_id_txt,in_txt,post_date,loc_txt,jobr_txt,jp_txt,year_min_txt,year_max_txt,fa_txt,novacc_txt,rep_txt,keywords_txt,jp_txt  FROM   [post_vaca] where hidden_txt=0 and category in('2','3') order by pv_id_txt desc");
+        dt = g1.return_dt("SELECT  cast(year_min_txt as varchar) + '-'  +  cast(year_max_txt as varchar)as Experience,cast(salary_txt  as varchar) + '-'  +  cast(salary_txt_max  as varchar) as ctc,pv_id_txt,in_txt,post_date,loc_txt,year_min_txt,year_max_txt,fa_txt,novacc_txt,rep_txt,keywords_txt  FROM   [post_vaca] where hidden_txt=0 and category in('2','3') order by pv_id_txt desc");
         jobdtl.Length = 0;
         for (int i = 0; i < dt.Rows.Count; i++)
         {
@@ -49,7 +49,7 @@ public partial class External_careerdetails : System.Web.UI.Page
             indus = Convert.ToString(dt.Rows[i]["in_txt"]);
             loc = Convert.ToString(dt.Rows[i]["loc_txt"]);
             loc = loc.Replace("<br/>", ",");
-            spc = Convert.ToString(dt.Rows[i]["jp_txt"]);
+            // spc = Convert.ToString(dt.Rows[i]["jp_txt"]);
             key = Convert.ToString(dt.Rows[i]["keywords_txt"]);
             pid1 = Convert.ToString(dt.Rows[i]["pv_id_txt"]);
 

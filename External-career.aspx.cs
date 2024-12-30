@@ -18,7 +18,7 @@ public partial class External_career : System.Web.UI.Page
     DataTable dt = new DataTable();
     General g1 = new General();
     int id;
-    public static string profess="",acquali="",jobres="",compprofile="",datepost = "", jobposition = "", jobname = "", profile = "", addr = "", expmin = "", expmax = "", ctcfrm = "", ctcto = "", keyskill = "", quli = "", specific = "", jobfunc = "", industry = "", description = "";
+    public static string profess="",acquali="",jobres="",compprofile="",datepost = "", jobposition = "", jobname = "", profile = "", addr = "", expmin = "", expmax = "", ctcfrm = "", ctcto = "", keyskill = "", quli = "", jobfunc = "", industry = "", description = "";
 
     public static string indus = "", locton="",opening = "", contctperson = "", contctemail = "", contctphone = "", contctaddr = "", comname = "";
 
@@ -81,10 +81,10 @@ public partial class External_career : System.Web.UI.Page
             ctcto = Convert.ToString(dt.Rows[0]["salary_txt_max"]);
             keyskill = Convert.ToString(dt.Rows[0]["keywords_txt"]);
             quli = Convert.ToString(dt.Rows[0]["aqr_txt"]);
-            specific = Convert.ToString(dt.Rows[0]["jp_txt"]);
+            //specific = Convert.ToString(dt.Rows[0]["jp_txt"]);
         
             industry = Convert.ToString(dt.Rows[0]["in_txt"]);
-            description = Convert.ToString(dt.Rows[0]["jobr_txt"]);
+            // description = Convert.ToString(dt.Rows[0]["jobr_txt"]);
             jobposition = Convert.ToString(dt.Rows[0]["rep_txt"]);
             datepost = Convert.ToDateTime(dt.Rows[0]["post_date"]).ToString("dd-MMM-yyyy");
             compprofile = Convert.ToString(dt.Rows[0]["cprofile_txt"]);

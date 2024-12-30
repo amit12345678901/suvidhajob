@@ -66,7 +66,7 @@
                             <div class="main-form">
                                 <h3>Post Resume</h3>
                                 <!-- form-horizontal text-left -->
-                                <div class="form-group-row">
+                                <div class="form-horizontal text-left">
                                     <div class="form-group">
                                         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                                     </div>
@@ -385,7 +385,7 @@
                                             </asp:ListBox>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <label class="col-sm-3">Year of passing <span style="color:red">*</span></label>
                                         <asp:DropDownList ID="yearofpassing" runat="server">
                                             <asp:ListItem>Select</asp:ListItem>
@@ -476,7 +476,7 @@
                                             <asp:ListItem Value="2029"></asp:ListItem>
                                             <asp:ListItem Value="2030"></asp:ListItem>
                                         </asp:DropDownList>
-                                    </div>
+                                    </div> -->
 
                                     <div class="form-group">
                                         <label class="col-sm-3">If other</label>
@@ -831,12 +831,12 @@
                                         </div>
                                     </div>
 
-                                    <div>
+                                    <!-- <div>
                                         <asp:FileUpload ID="FileUploadControl" runat="server" />
                                         <asp:Button ID="UploadButton" runat="server" Text="Upload"
                                             onclick="UploadButton_Click" />
                                         <asp:Label ID="StatusLabel" runat="server" Text=""></asp:Label>
-                                    </div>
+                                    </div> -->
                                     <div class="form-group">
 
                                         <div class="col-sm-12">
