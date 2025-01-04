@@ -234,8 +234,6 @@ public partial class Employer_Registation : System.Web.UI.Page
         private const int SmtpPort = 25;
         private const string FromEmail = "noreply@suvidhajobs.in";
         private const string EmailPassword = "Norp@4521*";
-        private const string AdminEmail = "maityamit2024@gmail.com";
-
 
         public void mail(string to, string name)
         {
@@ -312,7 +310,7 @@ public partial class Employer_Registation : System.Web.UI.Page
         private const int SmtpPort = 25;
         private const string FromEmail = "noreply@suvidhajobs.in";
         private const string EmailPassword = "Norp@4521*";
-        private const string AdminEmail = "amitmaity2024@gmail.com";
+        private const string AdminEmail = "response@suvidhajobs.in";
 
         public void mail1(string name)
         {
